@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const { getUsers, postUser } = require('../controllers/userController');
+const { getMovies, postMovie } = require('../controllers/movieController');
 
-// Ruta GET para obtener todos los usuarios
-router.get('/', getUsers);
+// Ruta GET
+router.get('/', getMovies);
 
-// Ruta POST para agregar un nuevo usuario
-router.post('/', postUser);
+// Ruta POST
+router.post('/', postMovie);
 
 module.exports = router;
