@@ -1,11 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const { getMovies, postMovie } = require('../controllers/movieController');
+const { getMovies, postMovie, deleteMovie } = require('../controllers/movieController');
 
-// Ruta GET
 router.get('/', getMovies);
-
-// Ruta POST
 router.post('/', postMovie);
+router.delete('/:id', deleteMovie); 
 
 module.exports = router;
